@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="rfid_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="motor_front_right_revolute_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_right_revolute_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_right_revolute_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="motor_back_right_revolute_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_right_revolute_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_right_revolute_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="motor_back_left_revolute_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_back_left_revolute_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_back_left_revolute_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="motor_front_left_revolute_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="motor_front_left_revolute_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor_front_left_revolute_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

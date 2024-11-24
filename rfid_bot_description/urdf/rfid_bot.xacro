@@ -1,0 +1,249 @@
+<?xml version="1.0" ?>
+<robot name="rfid_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find rfid_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rfid_bot_description)/urdf/rfid_bot.trans" />
+<xacro:include filename="$(find rfid_bot_description)/urdf/rfid_bot.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0001203609283711639 -9.007685506002144e-08 0.005" rpy="0 0 0"/>
+    <mass value="2.3676720209661735"/>
+    <inertia ixx="0.054685" iyy="0.084178" izz="0.138823" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_holder_front_right_1">
+  <inertial>
+    <origin xyz="0.012727999999996908 -0.0025432300955718357 0.0210109228668195" rpy="0 0 0"/>
+    <mass value="0.1994053104208443"/>
+    <inertia ixx="0.000127" iyy="0.000144" izz="0.000136" ixy="0.0" iyz="3.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.162272 0.148728 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.162272 0.148728 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_holder_back_right_1">
+  <inertial>
+    <origin xyz="0.012727999999996908 -0.0025432300955718357 0.0210109228668195" rpy="0 0 0"/>
+    <mass value="0.1994053104208443"/>
+    <inertia ixx="0.000127" iyy="0.000144" izz="0.000136" ixy="0.0" iyz="3.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.187728 0.148728 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.187728 0.148728 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_holder_front_left_1">
+  <inertial>
+    <origin xyz="-0.012727999999995326 0.0025437032647091795 0.021010922866819493" rpy="0 0 0"/>
+    <mass value="0.19940531042084406"/>
+    <inertia ixx="0.000127" iyy="0.000144" izz="0.000136" ixy="0.0" iyz="-3.3e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.187728 -0.149005 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.187728 -0.149005 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_holder_back_left_1">
+  <inertial>
+    <origin xyz="-0.012727999999996298 0.002543703264736019 0.021010922866819493" rpy="0 0 0"/>
+    <mass value="0.19940531042084406"/>
+    <inertia ixx="0.000127" iyy="0.000144" izz="0.000136" ixy="0.0" iyz="-3.3e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.162272 -0.149005 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.162272 -0.149005 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_holder_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_front_right_1">
+  <inertial>
+    <origin xyz="5.828670879282072e-16 -0.03070345073743927 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="2.1541038683930718"/>
+    <inertia ixx="0.00403" iyy="0.007461" izz="0.00403" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.175 0.171 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.175 0.171 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_front_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_back_right_1">
+  <inertial>
+    <origin xyz="6.38378239159465e-16 -0.03070345073743927 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="2.1541038683930718"/>
+    <inertia ixx="0.00403" iyy="0.007461" izz="0.00403" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.175 0.171 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.175 0.171 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_back_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_back_left_1">
+  <inertial>
+    <origin xyz="-8.604228440844963e-16 0.030703923908720537 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="2.154103883771447"/>
+    <inertia ixx="0.00403" iyy="0.007461" izz="0.00403" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.175 -0.171277 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.175 -0.171277 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_back_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_front_left_1">
+  <inertial>
+    <origin xyz="1.942890293094024e-16 0.030703923908693614 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="2.154103883771447"/>
+    <inertia ixx="0.00403" iyy="0.007461" izz="0.00403" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.175 -0.171277 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.175 -0.171277 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find rfid_bot_description)/meshes/motor_front_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="motor_holder_front_right_base_link_joint" type="fixed">
+  <origin xyz="0.162272 -0.148728 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_holder_front_right_1"/>
+</joint>
+
+<joint name="motor_holder_back_right_base_link_joint" type="fixed">
+  <origin xyz="-0.187728 -0.148728 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_holder_back_right_1"/>
+</joint>
+
+<joint name="motor_holder_front_left_base_link_joint" type="fixed">
+  <origin xyz="0.187728 0.149005 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_holder_front_left_1"/>
+</joint>
+
+<joint name="motor_holder_back_left_base_link_joint" type="fixed">
+  <origin xyz="-0.162272 0.149005 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_holder_back_left_1"/>
+</joint>
+
+<joint name="motor_front_right_revolute_joint" type="continuous">
+  <origin xyz="0.012728 -0.022272 0.035" rpy="0 0 0"/>
+  <parent link="motor_holder_front_right_1"/>
+  <child link="motor_front_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="motor_back_right_revolute_joint" type="continuous">
+  <origin xyz="0.012728 -0.022272 0.035" rpy="0 0 0"/>
+  <parent link="motor_holder_back_right_1"/>
+  <child link="motor_back_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="motor_back_left_revolute_joint" type="continuous">
+  <origin xyz="-0.012728 0.022272 0.035" rpy="0 0 0"/>
+  <parent link="motor_holder_back_left_1"/>
+  <child link="motor_back_left_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="motor_front_left_revolute_joint" type="continuous">
+  <origin xyz="-0.012728 0.022272 0.035" rpy="0 0 0"/>
+  <parent link="motor_holder_front_left_1"/>
+  <child link="motor_front_left_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>

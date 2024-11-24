@@ -1,0 +1,9 @@
+<library path="rfid_bot_system_hardware_interface">
+  <class name="rfid_bot_system_hardware_interface/RfidBotSystemHardware"
+         type="rfid_bot_system_hardware_interface::RfidBotSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      The ros2_control RfidBot Hardware Interface
+    </description>
+  </class>
+</library>
